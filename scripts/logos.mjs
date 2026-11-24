@@ -107,3 +107,23 @@ for (const family of ['mark', 'horizontal', 'stacked', 'wordmark']) {
     console.log(`${family}/${name} ${pw}x${ph}`);
   }
 }
+
+// Social avatars: 1024 squares on void, built from the same lockups.
+mkdirSync(join(root, 'social'), { recursive: true });
+const AVATARS = {
+  'ekinoxis-avatar': { family: 'mark', width: 0.5 },
+  'ekinoxis-avatar-with-wordmark': { family: 'stacked', width: 0.72 },
+};
+for (const [name, { family, width }] of Object.entries(AVATARS)) {
+  const { W, H, svg } = compose(family, TONES['cyan-transparent']);
+  const w = 1024 * width + (2 * CLEAR * 1024 * width) / (W - 2 * CLEAR); // the lockup, not its clear space, fills `width`
+  const h = (w * H) / W;
+  const inner = svg.replace('<svg ', `<svg x="${(1024 - w) / 2}" y="${(1024 - h) / 2}" `).replace(/width="\d+" height="\d+"/, `width="${w}" height="${h}"`);
+  const out = `<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-label="Ekinoxis"><rect width="1024" height="1024" fill="${c('void')}"/>${inner.trim()}</svg>\n`;
+  writeFileSync(join(root, 'social', `${name}.svg`), out);
+  const html = join(tmp, `${name}.html`);
+  writeFileSync(html, `<!doctype html><style>html,body{margin:0}svg{display:block}</style>${out}`);
+  execFileSync(CHROME, ['--headless=new', '--disable-gpu', '--hide-scrollbars', '--window-size=1024,1024',
+    `--screenshot=${join(root, 'social', `${name}-1024.png`)}`, `file://${html}`], { stdio: 'ignore' });
+  console.log(`social/${name} 1024x1024`);
+}

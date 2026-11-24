@@ -62,6 +62,20 @@ const css = [
 writeFileSync(resolve(out, 'tokens.css'), css);
 
 writeFileSync(resolve(out, 'tokens.mjs'), `// Generated from tokens.json. Do not edit.\nexport default ${JSON.stringify(flat, null, 2)};\n`);
+// Types: every token name as a literal key.
+const tsType = (v) => (Array.isArray(v) ? 'readonly string[]' : typeof v === 'object'
+  ? `{ ${Object.entries(v).map(([k, x]) => `readonly ${k}: ${typeof x === 'number' ? 'number' : 'string'}`).join('; ')} }`
+  : typeof v === 'number' ? 'number' : 'string');
+writeFileSync(resolve(out, 'tokens.d.ts'), [
+  '// Generated from tokens.json. Do not edit.',
+  'declare const tokens: {',
+  ...Object.entries(flat).map(([k, v]) => `  readonly ${JSON.stringify(k)}: ${tsType(v)};`),
+  '};',
+  'export type TokenName = keyof typeof tokens;',
+  'export default tokens;',
+  '',
+].join('\n'));
+writeFileSync(resolve(out, 'tailwind-preset.d.cts'), '// Generated. Do not edit.\nimport type { Config } from \'tailwindcss\';\ndeclare const preset: Partial<Config>;\nexport = preset;\n');
 writeFileSync(resolve(out, 'tokens.flat.json'), JSON.stringify(flat, null, 2) + '\n');
 
 // Tailwind preset (v3 `presets: [require('@ekinoxis/brand/tailwind')]`).

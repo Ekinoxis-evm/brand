@@ -9,7 +9,7 @@ Every other copy (Figma, the claude.ai design system, each repo's `DESIGN.md`, `
 
 ```bash
 npm i github:Ekinoxis-evm/brand          # latest
-npm i github:Ekinoxis-evm/brand#v0.1.5   # pinned (recommended)
+npm i github:Ekinoxis-evm/brand#v0.1.6   # pinned (recommended)
 ```
 
 ```js
@@ -29,7 +29,7 @@ import brand from '@ekinoxis/brand';
 brand['color-equinox-cyan']; // '#8ff5ff'
 ```
 
-Logos, fonts and imagery are available at `@ekinoxis/brand/logos/…`, `/fonts/…` and `/imagery/…`.
+Logos, social avatars, fonts and imagery are available at `@ekinoxis/brand/logos/…`, `/social/…`, `/fonts/…` and `/imagery/…`. The package ships TypeScript types: the default export is typed with every token name.
 
 ## Change a token
 
@@ -110,7 +110,9 @@ Every logo comes in five tones, and each one ships as both an SVG and a PNG: `lo
 - PNGs render the mark 512px tall.
 - Every file includes clear space of a quarter of the mark's height. Don't recolor, stretch, outline or add effects.
 
-**Regenerate.** All 40 files come from one script, `scripts/logos.mjs`, which uses the geometry of ekinoxis.xyz's `BrandLogo.tsx` and the colors in `tokens.json`. After a color change, run `npm i && npm run logos` (macOS with Chrome installed). Never edit a logo file by hand.
+**Social avatars.** `social/ekinoxis-avatar` (mark) and `social/ekinoxis-avatar-with-wordmark` (stacked) are 1024px squares on black, in SVG and PNG, for profile pictures.
+
+**Regenerate.** All the logo and avatar files come from one script, `scripts/logos.mjs`, which uses the geometry of ekinoxis.xyz's `BrandLogo.tsx` and the colors in `tokens.json`. After a color change, run `npm i && npm run logos` (macOS with Chrome installed). Never edit a logo file by hand.
 
 ## Imagery
 

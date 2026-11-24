@@ -1,20 +1,27 @@
 {
   "name": "@ekinoxis/brand",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Ekinoxis brand source: tokens, logos, fonts and imagery for every Ekinoxis project.",
   "license": "SEE LICENSE IN LICENSE.md",
   "repository": "github:Ekinoxis-evm/brand",
   "type": "module",
   "exports": {
-    ".": "./dist/tokens.mjs",
+    ".": {
+      "types": "./dist/tokens.d.ts",
+      "default": "./dist/tokens.mjs"
+    },
     "./tokens.json": "./tokens.json",
     "./tokens.css": "./dist/tokens.css",
-    "./tailwind": "./dist/tailwind-preset.cjs",
+    "./tailwind": {
+      "types": "./dist/tailwind-preset.d.cts",
+      "default": "./dist/tailwind-preset.cjs"
+    },
     "./fonts.css": "./fonts/fonts.css",
     "./fonts/*": "./fonts/*",
     "./logos/*": "./logos/*",
     "./favicon/*": "./favicon/*",
-    "./imagery/*": "./imagery/*"
+    "./imagery/*": "./imagery/*",
+    "./social/*": "./social/*"
   },
   "files": [
     "dist",
@@ -23,6 +30,7 @@
     "logos",
     "favicon",
     "imagery",
+    "social",
     "LICENSE.md"
   ],
   "scripts": {
@@ -31,5 +39,6 @@
   },
   "devDependencies": {
     "opentype.js": "1.3.4"
-  }
+  },
+  "types": "./dist/tokens.d.ts"
 }
