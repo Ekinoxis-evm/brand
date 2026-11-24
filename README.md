@@ -9,7 +9,7 @@ Every other copy (Figma, the claude.ai design system, each repo's `DESIGN.md`, `
 
 ```bash
 npm i github:Ekinoxis-evm/brand          # latest
-npm i github:Ekinoxis-evm/brand#v0.1.2   # pinned (recommended)
+npm i github:Ekinoxis-evm/brand#v0.1.3   # pinned (recommended)
 ```
 
 ```js
@@ -61,7 +61,7 @@ Dark only. Black is the canvas, and cyan is the one light.
 | equinox-cyan-on-light | `#00789e` | Logo on light backgrounds only |
 | ink-on-cyan | `#005d63` | Text on cyan (6.1:1) |
 | cosmic-blue | `#9492ff` | Secondary accent |
-| signal-lime | `#beee00` | End states only: done, live, the goal |
+| signal-green | `#00ff41` | Matrix green. End states only: done, live, the goal |
 | alert-coral | `#ff716c` | Errors, and the low step of a scale |
 | signal-amber | `#ffd45c` | Warnings, and the middle step of a scale |
 | chart-1…4 | `#c47524` `#0f98a6` `#7a9700` `#5585ff` | Charts |
@@ -71,8 +71,8 @@ Contrast ratios are measured on obsidian.
 **Rules**
 - **One light.** Each screen, slide or frame has one cyan focal point. If two things glow, one of them is wrong.
 - **Full-strength text.** Never fade text with opacity. Use mist or slate-label at full strength.
-- **Lime means arrival.** Signal lime marks an end state. It is never decoration.
-- **Status colors are signals, not accents.** Coral, amber and lime only mean bad / good / excellent (or error / warning / done). Rating scales run coral → amber → lime, like a traffic light. Always pair the color with a word, never color alone.
+- **Green means arrival.** Signal green marks an end state. It is never decoration. (`signal-lime` is a deprecated alias for it, and will be removed in v0.2.)
+- **Status colors are signals, not accents.** Coral, amber and green only mean bad / good / excellent (or error / warning / done). Rating scales run coral → amber → green, like a traffic light. Always pair the color with a word, never color alone.
 
 ## Type
 
