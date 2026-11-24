@@ -9,7 +9,7 @@ Every other copy (Figma, the claude.ai design system, each repo's `DESIGN.md`, `
 
 ```bash
 npm i github:Ekinoxis-evm/brand          # latest
-npm i github:Ekinoxis-evm/brand#v0.1.3   # pinned (recommended)
+npm i github:Ekinoxis-evm/brand#v0.1.4   # pinned (recommended)
 ```
 
 ```js
@@ -118,7 +118,12 @@ Every image follows the same rules: a dark half and a lit half, cyan light, and 
 
 ## Voice
 
-**Open.** The live site speaks to the reader as *tú* in sentence case. The claude.ai design system built on 24 Nov says to avoid "you" and to set headlines in ALL CAPS. Decide which one wins, then record it here.
+The same in Spanish and English.
+
+- **Talk to the reader directly.** Use *tú* in Spanish and "you" in English: "Tus llaves, tu dinero" / "Your keys, your money". Never use *usted*, and never write in an impersonal voice ("Llaves propias.").
+- **Sentence case.** Headlines, buttons and titles start with a capital and continue in lowercase: "Aprende a custodiar tus criptos".
+- **ALL CAPS only for the few giant display lines** (the hero slogan, a cover title) and for mono labels and badges. Never for running headlines or paragraphs.
+- **Plain words first.** A headline says what the reader gets. The technical term goes in a label or subtitle underneath.
 
 ## Copies and their status
 
@@ -128,5 +133,5 @@ Every image follows the same rules: a dark half and a lit half, cyan light, and 
 | `company/ekinoxisweb/public/brand/` (colors.md, typography.md, zip) | Stale (blue, 16 Sep). Replace with this package |
 | `marketing/design-system`, `marketing/DESIGN.md` | Blue, with 12/20px corners. To be pointed at this package (amber is now a brand token) |
 | `company/design-system` | Stale (blue, 25 Aug, no git). Retire |
-| claude.ai design system `Cwh4Z8bwcXScrE91H4rtT3` | Built from blue sources. Rebuild from this repo |
+| claude.ai design system `Cwh4Z8bwcXScrE91H4rtT3` | Built from blue sources, with the wrong voice (impersonal, ALL CAPS). Rebuild from this repo |
 | Figma | Variables to be synced from `tokens.json` |
