@@ -22,6 +22,7 @@ module.exports = {
         "cosmic-blue": "#9492ff",
         "signal-lime": "#beee00",
         "alert-coral": "#ff716c",
+        "signal-amber": "#ffd45c",
         "chart-1": "#c47524",
         "chart-2": "#0f98a6",
         "chart-3": "#7a9700",

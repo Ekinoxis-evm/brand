@@ -36,7 +36,7 @@ const lum = (hex) => {
 const ratio = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((m, n) => n - m); return (x + 0.05) / (y + 0.05); };
 const bg = flat['color-obsidian'];
 const failures = [];
-for (const name of ['first-light', 'mist', 'slate-label', 'equinox-cyan', 'cosmic-blue', 'signal-lime', 'alert-coral']) {
+for (const name of ['first-light', 'mist', 'slate-label', 'equinox-cyan', 'cosmic-blue', 'signal-lime', 'signal-amber', 'alert-coral']) {
   const r = ratio(flat[`color-${name}`], bg);
   console.log(`contrast ${name.padEnd(14)} ${r.toFixed(2)}:1`);
   if (r < 4.5) failures.push(name);

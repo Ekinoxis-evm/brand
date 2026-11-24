@@ -9,7 +9,7 @@ Every other copy (Figma, the claude.ai design system, each repo's `DESIGN.md`, `
 
 ```bash
 npm i github:Ekinoxis-evm/brand          # latest
-npm i github:Ekinoxis-evm/brand#v0.1.1   # pinned (recommended)
+npm i github:Ekinoxis-evm/brand#v0.1.2   # pinned (recommended)
 ```
 
 ```js
@@ -62,7 +62,8 @@ Dark only. Black is the canvas, and cyan is the one light.
 | ink-on-cyan | `#005d63` | Text on cyan (6.1:1) |
 | cosmic-blue | `#9492ff` | Secondary accent |
 | signal-lime | `#beee00` | End states only: done, live, the goal |
-| alert-coral | `#ff716c` | Errors |
+| alert-coral | `#ff716c` | Errors, and the low step of a scale |
+| signal-amber | `#ffd45c` | Warnings, and the middle step of a scale |
 | chart-1…4 | `#c47524` `#0f98a6` `#7a9700` `#5585ff` | Charts |
 
 Contrast ratios are measured on obsidian.
@@ -71,6 +72,7 @@ Contrast ratios are measured on obsidian.
 - **One light.** Each screen, slide or frame has one cyan focal point. If two things glow, one of them is wrong.
 - **Full-strength text.** Never fade text with opacity. Use mist or slate-label at full strength.
 - **Lime means arrival.** Signal lime marks an end state. It is never decoration.
+- **Status colors are signals, not accents.** Coral, amber and lime only mean bad / good / excellent (or error / warning / done). Rating scales run coral → amber → lime, like a traffic light. Always pair the color with a word, never color alone.
 
 ## Type
 
@@ -124,7 +126,7 @@ Every image follows the same rules: a dark half and a lit half, cyan light, and 
 |---|---|
 | `company/ekinoxisweb` (DESIGN.md, tailwind, globals.css) | Graphite since a877783. To be wired to this package |
 | `company/ekinoxisweb/public/brand/` (colors.md, typography.md, zip) | Stale (blue, 16 Sep). Replace with this package |
-| `marketing/design-system`, `marketing/DESIGN.md` | Blue, with 12/20px corners and amber `#FFD45C`. To be pointed at this package |
+| `marketing/design-system`, `marketing/DESIGN.md` | Blue, with 12/20px corners. To be pointed at this package (amber is now a brand token) |
 | `company/design-system` | Stale (blue, 25 Aug, no git). Retire |
 | claude.ai design system `Cwh4Z8bwcXScrE91H4rtT3` | Built from blue sources. Rebuild from this repo |
 | Figma | Variables to be synced from `tokens.json` |

@@ -19,6 +19,7 @@ export default {
   "color-cosmic-blue": "#9492ff",
   "color-signal-lime": "#beee00",
   "color-alert-coral": "#ff716c",
+  "color-signal-amber": "#ffd45c",
   "color-chart-1": "#c47524",
   "color-chart-2": "#0f98a6",
   "color-chart-3": "#7a9700",
