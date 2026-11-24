@@ -9,7 +9,7 @@ Every other copy (Figma, the claude.ai design system, each repo's `DESIGN.md`, `
 
 ```bash
 npm i github:Ekinoxis-evm/brand          # latest
-npm i github:Ekinoxis-evm/brand#v0.1.0   # pinned (recommended)
+npm i github:Ekinoxis-evm/brand#v0.1.1   # pinned (recommended)
 ```
 
 ```js
