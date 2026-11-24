@@ -9,7 +9,7 @@ Every other copy (Figma, the claude.ai design system, each repo's `DESIGN.md`, `
 
 ```bash
 npm i github:Ekinoxis-evm/brand          # latest
-npm i github:Ekinoxis-evm/brand#v0.1.4   # pinned (recommended)
+npm i github:Ekinoxis-evm/brand#v0.1.5   # pinned (recommended)
 ```
 
 ```js
@@ -76,7 +76,7 @@ Contrast ratios are measured on obsidian.
 
 ## Type
 
-Three faces, each with one job. All are OFL-licensed and bundled in `fonts/`.
+Three faces, each with one job. All are OFL-licensed and bundled in `fonts/`: woff2 for the web, plus static Space Grotesk TTFs in `fonts/static/` for Figma, desktop apps and the logo script.
 
 | Face | Job |
 |---|---|
@@ -95,17 +95,22 @@ Nothing is smaller than 11px, and 11px is for badges only.
 
 The mark is a solid half-disc inside a thin ring, split by a vertical axis: light and dark in balance. The lockup is mark + `[ EKINOXIS ]`, with the brackets in cyan at weight 300.
 
-| Folder | Variants |
-|---|---|
-| `logos/mark` | cyan-on-black, cyan-transparent, white, black |
-| `logos/horizontal` | + cyan-on-light |
-| `logos/stacked` | cyan-on-black, cyan-transparent, white |
-| `logos/wordmark` | + cyan-on-light, black |
+Every logo comes in five tones, and each one ships as both an SVG and a PNG: `logos/{mark,horizontal,stacked,wordmark}/{svg,png}/ekinoxis-<family>-<tone>`.
 
-Tones: cyan (ring `#3d3d3d`, disc and brackets cyan, type `#ededed`) · white (ring `#707070`, everything else `#ededed`) · black (ring `#707070`, everything else black).
-Keep clear space of at least the mark's half-width on every side. Don't recolor, stretch, outline or add effects.
+| Tone | Use on | Colors |
+|---|---|---|
+| `cyan-on-black` | Anywhere (has its own black background) | ring `hairline`, disc and brackets cyan, type `first-light` |
+| `cyan-transparent` | Dark backgrounds | same, no background |
+| `cyan-on-light` | Light backgrounds | ring `logo-ring`, disc and brackets `equinox-cyan-on-light`, type black |
+| `white` | Dark backgrounds, one color | ring `logo-ring`, everything else `first-light` |
+| `black` | Light backgrounds, one color | ring `logo-ring`, everything else black |
 
-> **Known issue (v0.1.0).** The logo masters don't agree yet. The SVGs were recolored to graphite, but the horizontal SVG has no ring and uses `<text>` (it needs Space Grotesk installed to render). The PNGs are the 16 Sep blue-era renders. The geometry that is actually live is `ekinoxisweb/src/components/ui/BrandLogo.tsx`. Until the masters are redrawn as outlined SVGs from that component, use the component on the web and the PNGs elsewhere.
+- The text is converted to outlines, so the SVGs render the same everywhere with no font installed.
+- The axis is a real gap, not a black line, so the mark works on any background.
+- PNGs render the mark 512px tall.
+- Every file includes clear space of a quarter of the mark's height. Don't recolor, stretch, outline or add effects.
+
+**Regenerate.** All 40 files come from one script, `scripts/logos.mjs`, which uses the geometry of ekinoxis.xyz's `BrandLogo.tsx` and the colors in `tokens.json`. After a color change, run `npm i && npm run logos` (macOS with Chrome installed). Never edit a logo file by hand.
 
 ## Imagery
 
