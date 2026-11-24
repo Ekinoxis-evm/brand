@@ -1,0 +1,45 @@
+/* Generated from tokens.json. Do not edit. */
+:root {
+  --ekx-color-void: #000000;
+  --ekx-color-obsidian: #0a0a0a;
+  --ekx-color-deep-tide: #111111;
+  --ekx-color-tide: #171717;
+  --ekx-color-raised-tide: #1c1c1c;
+  --ekx-color-high-tide: #242424;
+  --ekx-color-bright-tide: #2a2a2a;
+  --ekx-color-first-light: #ededed;
+  --ekx-color-mist: #a3a3a3;
+  --ekx-color-slate-label: #8f8f8f;
+  --ekx-color-hairline: #3d3d3d;
+  --ekx-color-logo-ring: #707070;
+  --ekx-color-equinox-cyan: #8ff5ff;
+  --ekx-color-equinox-cyan-deep: #00deec;
+  --ekx-color-equinox-cyan-on-light: #00789e;
+  --ekx-color-ink-on-cyan: #005d63;
+  --ekx-color-cosmic-blue: #9492ff;
+  --ekx-color-signal-lime: #beee00;
+  --ekx-color-alert-coral: #ff716c;
+  --ekx-color-chart-1: #c47524;
+  --ekx-color-chart-2: #0f98a6;
+  --ekx-color-chart-3: #7a9700;
+  --ekx-color-chart-4: #5585ff;
+  --ekx-font-family-display: 'Space Grotesk', sans-serif;
+  --ekx-font-family-body: Inter, sans-serif;
+  --ekx-font-family-mono: 'Space Mono', monospace;
+  --ekx-radius-none: 0px;
+  --ekx-radius-full: 9999px;
+  --ekx-space-hairline: 1px;
+  --ekx-space-gutter: 24px;
+  --ekx-space-card: 24px;
+  --ekx-space-card-lg: 40px;
+  --ekx-space-section: 64px;
+  --ekx-space-section-lg: 96px;
+}
+.ekx-type-display { font-family: 'Space Grotesk', sans-serif; font-size: clamp(3rem, 9vw, 8rem); font-weight: 700; line-height: 0.9; letter-spacing: -0.05em; }
+.ekx-type-headline { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.875rem, 4vw, 3rem); font-weight: 700; line-height: 0.95; letter-spacing: -0.05em; }
+.ekx-type-title { font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; line-height: 1.1; letter-spacing: -0.025em; }
+.ekx-type-body { font-family: Inter, sans-serif; font-size: 1.125rem; font-weight: 400; line-height: 1.625; letter-spacing: 0; }
+.ekx-type-body-sm { font-family: Inter, sans-serif; font-size: 15px; font-weight: 400; line-height: 1.6; letter-spacing: 0; }
+.ekx-type-label { font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 400; line-height: 1.4; letter-spacing: 0.1em; }
+.ekx-type-label-sm { font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 400; line-height: 1.4; letter-spacing: 0.15em; }
+.ekx-type-label-lg { font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 500; line-height: 1.6; letter-spacing: 0.05em; }

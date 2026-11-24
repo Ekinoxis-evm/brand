@@ -1,0 +1,24 @@
+{
+  "name": "@ekinoxis/brand",
+  "version": "0.1.0",
+  "description": "Ekinoxis brand source: tokens, logos, fonts and imagery for every Ekinoxis project.",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "repository": "github:Ekinoxis-evm/brand",
+  "type": "module",
+  "exports": {
+    ".": "./dist/tokens.mjs",
+    "./tokens.json": "./tokens.json",
+    "./tokens.css": "./dist/tokens.css",
+    "./tailwind": "./dist/tailwind-preset.cjs",
+    "./fonts.css": "./fonts/fonts.css",
+    "./fonts/*": "./fonts/*",
+    "./logos/*": "./logos/*",
+    "./favicon/*": "./favicon/*",
+    "./imagery/*": "./imagery/*"
+  },
+  "files": ["dist", "tokens.json", "fonts", "logos", "favicon", "imagery", "LICENSE.md"],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "prepare": "node scripts/build.mjs"
+  }
+}
