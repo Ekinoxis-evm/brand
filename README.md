@@ -35,7 +35,7 @@ Logos, social avatars, fonts and imagery are available at `@ekinoxis/brand/logos
 
 1. Edit `tokens.json`. It uses the W3C Design Tokens format.
 2. Run `npm run build`. This regenerates `dist/` and fails if a text color drops below 4.5:1.
-3. Commit, tag (`v0.x.y`) and push. Update Figma variables to match.
+3. Commit, tag (`v0.x.y`) and push. Update the matching variable in the Figma file [Ekinoxis Brand](https://www.figma.com/design/HpSpJntFKFAHG1AEZS4my4) (collection "Brand"). After a color change, also run `npm run logos`.
 4. Projects bump their pinned tag.
 
 ## Color
@@ -136,9 +136,9 @@ The same in Spanish and English.
 
 | Copy | Status |
 |---|---|
-| `company/ekinoxisweb` (DESIGN.md, tailwind, globals.css) | Graphite since a877783. To be wired to this package |
-| `company/ekinoxisweb/public/brand/` (colors.md, typography.md, zip) | Stale (blue, 16 Sep). Replace with this package |
+| `company/ekinoxisweb` | On this package (v0.1.5), live |
+| `company/ekinoxisweb/public/brand/` | Synced from this package by `npm run brand:sync` |
 | `marketing/design-system`, `marketing/DESIGN.md` | Blue, with 12/20px corners. To be pointed at this package (amber is now a brand token) |
 | `company/design-system` | Stale (blue, 25 Aug, no git). Retire |
-| claude.ai design system `Cwh4Z8bwcXScrE91H4rtT3` | Built from blue sources, with the wrong voice (impersonal, ALL CAPS). Rebuild from this repo |
-| Figma | Variables to be synced from `tokens.json` |
+| claude.ai design system `Cwh4Z8bwcXScrE91H4rtT3` | Synced to v0.1.5. Legacy files inside are marked as history |
+| Figma [Ekinoxis Brand](https://www.figma.com/design/HpSpJntFKFAHG1AEZS4my4) | Synced to v0.1.5 (variables, text styles, 20 logo components) |
